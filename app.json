@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/fabu/fabu",
+    "pages/jiedan/jiedan",
+    "pages/userinfo/userinfo",
+    "pages/logs/logs",
+    "pages/jiedan/working/working",
+    "pages/jiedan/customer/customer",
+    "pages/jiedan/delivering/delivering",
+    "pages/fabu/stateinfo/stateinfo",
+    "pages/userinfo/history/history",
+    "pages/userinfo/register/register",
+    "pages/userinfo/login/login",
+    "pages/userinfo/uploadInfor/uploadInfor",
+    "pages/fabu/form/form",
+    "pages/fabu/chooserider/chooserider",
+    "components/top-refresh/top-refresh",
+    "components/RefreshView/refresh-view"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1baad5",
+    "navigationBarTitleText": "HDU Upstairs",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#1baad5",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "backgroundColor": "#f5f5f5",
+    "color": "#000",
+    "selectedColor": "#1baad5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/jiedan/jiedan",
+        "text": "接 单",
+        "iconPath": "ico/cart_empty.png",
+        "selectedIconPath": "ico/on_cart_empty.png"
+      },
+      {
+        "pagePath": "pages/fabu/fabu",
+        "text": "发 布",
+        "iconPath": "ico/order.png",
+        "selectedIconPath": "ico/on_order.png"
+      },
+      {
+        "pagePath": "pages/userinfo/userinfo",
+        "text": "我",
+        "iconPath": "ico/user.png",
+        "selectedIconPath": "ico/on_user.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

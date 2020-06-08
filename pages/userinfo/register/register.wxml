@@ -1,0 +1,32 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="inputarea">
+  <view class="inputItem">
+    <view>+86</view>
+    <input placeholder="请输入手机号" type="number" placeholder-class="placeholder" maxlength="11" bindblur="setPhoneNumber"></input>
+  </view>
+
+  <view class="line"></view>
+  <view class="inputItem identify">
+    <view>验证码</view>
+    <input placeholder="验证码" type="text" placeholder-class="placeholder" bindblur="setCode"></input>
+    <view class="sendCode" bindtap="getCode" wx:if="{{second==60}}">获取验证码</view>
+    <view class="sendCode"  disabled="true" wx:else>{{second}} s</view>
+  </view>
+ 
+  <view class="line"></view>
+  <view class="inputItem">
+    <view>密码</view>
+    <input placeholder="请输入6-16位密码" type="text" minlength="6" maxlength="16" placeholder-class="placeholder" bindblur="setPassword" password="{{true}}"></input>
+  </view>
+  
+  <view class="line"></view>
+  <view class="inputItem">
+    <view>确认密码</view>
+    <input placeholder="再次输入密码" type="text" minlength="6" maxlength="16" placeholder-class="placeholder" bindblur="confirmPassword"
+    password="{{true}}"></input>
+  </view>
+
+</view>
+<view class="button" bindtap="Register">注册</view>
+<view class="back" bindtap="back">返回登录</view>
+

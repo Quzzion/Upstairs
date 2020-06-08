@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "refresh-view": "/components/RefreshView/refresh-view"
+  }
+}

@@ -1,0 +1,142 @@
+
+.list{
+    margin-top: 20rpx;
+    padding-bottom: 150rpx;
+    color: white;
+  }
+  .list .one{
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    width: 91vw;
+    border-radius: 10rpx;
+    margin: 0 auto 30rpx;
+    color: #000;
+    position: relative;
+  }
+  .list .one .user open-data{
+     height: 12vw;
+     width: 12vw;
+     border-radius: 12vw;
+  }
+  .list .one .user{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+  }
+  .list .one .user .info{
+    width: 83vw;
+    margin-left: 20rpx;
+  }
+  .list .one .user .a{
+    display: flex;
+  }
+  .list .one .user .a text{
+    margin-right: 20rpx;
+  }
+  .list .one .user .b{
+    display: flex;
+    font-size: 26rpx;
+    line-height: 50rpx;
+    justify-content: space-between;
+  }
+  .list .one .user .b .money{
+  color: #000;
+  }
+  .list .one .user .b .orderButton{
+   width: 160rpx;
+  height: 90rpx;
+  background-color: #1baad5;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  }
+  .list .one .col{
+    color: #000;
+    margin: 5rpx 0;
+    /* display: flex;
+    align-items: center; */
+    font-size: 32rpx;
+  }
+  .text-fitter{
+    font-size: 50rpx;
+    text-align: center;
+
+  }
+  .list .one .col image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+  }
+  /* .sure{
+    
+    justify-content: space-between;
+    
+    font-size: 25rpx;
+    color: rgb(182, 177, 177);
+  } */
+.mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(218, 216, 216, 0.85);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mask .confirmBox{
+  height: 500rpx;
+  width: 600rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  color: #000;
+  position: relative;
+}
+.mask .confirmBox .title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 17rpx;
+}
+.mask .confirmBox .title image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 87rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+.mask .confirmBox .title view{
+  margin-left: 174rpx;
+  font-weight: 550;
+  font-size: 40rpx;
+}
+.mask .confirmBox .content view{
+  margin-bottom: 27rpx;
+  margin-left: 43rpx;
+  font-size: 35rpx;
+}
+.mask .confirmBox .content button{
+  margin-top: 10rpx;
+  width: 43%;
+  background-color: #ec4829;
+  color: #fff;
+  height: 83rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

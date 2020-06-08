@@ -1,0 +1,218 @@
+.writeInformation{
+  box-sizing: border-box;
+  padding-top: 0rpx;
+  height: 625rpx;
+  display: flex;
+  justify-content: center;
+  /* background-color: #fff; */
+  /* margin-bottom: -120rpx; */
+  /* background-image: url('../../ico/background.jpg'); */
+}
+.writeInformation .post{
+  margin-top: 400rpx;
+  height: 450rpx;
+  width: 450rpx;
+  border-radius:50%; 
+  background-color: #fff;
+  position: absolute;
+}
+.writeInformation .post image{
+  width: 100%;
+  height: 100%;
+}
+ .text{
+   margin-top:250rpx; 
+  color: #1baad5;
+  font-size: 50rpx;
+  width: 100%;
+  text-align: center;
+  font-weight: 550;
+  /* text-shadow:2px 1px 6px #1baad5; */
+}
+/* .input{
+ margin: 0 auto;
+ display: flex;
+ align-items: center;
+}
+.input image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: -70rpx;
+  z-index: 2;
+} */
+  .buttonArea{
+    margin: 0 auto ;
+    width: 90%;
+    display: flex;
+    
+    padding: 16rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 3px 5px 3px -5px rgba(0, 0, 0, 0.5);
+    /* text-align: center; */
+    border-radius: 15rpx;
+    /* font-size: 36rpx; */
+    justify-content: space-between;
+    /* border: #000 solid 1px; */
+    flex-wrap: wrap;
+  }
+ .button{
+   border-radius: 10rpx;
+   font-size: 35rpx;
+   color:#000;
+   text-align: center;
+  width: 48%;
+  height: 180rpx;
+  box-sizing: border-box;
+  /* border-radius: 0 */
+  background-color: #fff;
+
+}
+.button image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+}
+ .button:hover{
+  background-color: #f5f5f5;
+}
+.avalibleList{
+  height: 46%;
+  width: 96%;
+  background-color: #fff;
+   color:#000;
+}
+.avalibleList:hover{
+  background-color: #f5f5f5;
+}
+.list{
+    margin-top: 30rpx;
+    padding-bottom: 150rpx;
+    color: white;
+  }
+  .list .one{
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    width: 91vw;
+    border-radius: 10rpx;
+    margin: 0 auto 30rpx;
+    color: #000;
+  }
+  .list .one .user open-data{
+     height: 12vw;
+     width: 12vw;
+     border-radius: 12vw;
+  }
+  .list .one .user{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+  }
+  .list .one .user .info{
+    width: 83vw;
+    margin-left: 20rpx;
+  }
+  .list .one .user .a{
+    display: flex;
+  }
+  .list .one .user .a text{
+    margin-right: 20rpx;
+  }
+  .list .one .user .b{
+    display: flex;
+    font-size: 26rpx;
+    line-height: 50rpx;
+    justify-content: space-between;
+  }
+  .list .one .user .b .money{
+  color: #000;
+  }
+  .list .one .user .b .orderButton{
+   width: 160rpx;
+  height: 90rpx;
+  background-color: #1baad5;
+  margin-top: -35rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  }
+  .list .one .col{
+    color: #000;
+    margin: 5rpx 0;
+    /* display: flex;
+    align-items: center; */
+    font-size: 32rpx;
+  }
+  .text-fitter{
+    font-size: 50rpx;
+    text-align: center;
+
+  }
+  .list .one .col image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+  }
+  /* .sure{
+    
+    justify-content: space-between;
+    
+    font-size: 25rpx;
+    color: rgb(182, 177, 177);
+  } */
+.mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(218, 216, 216, 0.85);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mask .confirmBox{
+  height: 500rpx;
+  width: 600rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  color: #000;
+}
+.mask .confirmBox .title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 17rpx;
+}
+.mask .confirmBox .title image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 87rpx;
+
+}
+.mask .confirmBox .title view{
+  margin-left: 174rpx;
+  font-weight: 550;
+}
+.mask .confirmBox .content view{
+  margin-bottom: 27rpx;
+  margin-left: 43rpx;
+  font-size: 35rpx;
+}
+.mask .confirmBox .content button{
+  margin-top: 10rpx;
+  width: 43%;
+  background-color: #ec4829;
+  color: #fff;
+  height: 83rpx;
+  border-radius: 10rpx;
+}

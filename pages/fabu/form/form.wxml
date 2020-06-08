@@ -1,0 +1,132 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="background" style="width: 100%;height: 120rpx; background-color: #1baad5;"></view>
+  <view class="writeInformation">
+    <view class="nameAndPhone">
+      <view class="name">收货人：{{tocustomer}}</view>
+      <view class="phone">{{tocustomer}}</view>
+    </view>
+    <view class="location">
+      <view class="image">
+        <image src="../../../ico/address.png"></image>
+      </view>
+      <view>收货地址：{{meet_place}}</view>
+    </view>
+    <view class="information">备注：{{cus_details}}</view>
+  </view>
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+       <image src="../../../ico/export services.png"></image> 
+      </view>
+      <view>服务类型</view>
+    </view>
+    <radio-group bindchange="type">
+        <radio value="代拿快递">代拿快递</radio>
+        <radio value="代拿外卖">代拿外卖</radio>
+        <radio value="食堂代拿">食堂代拿</radio>
+        <radio value="超市代买">超市代买</radio>
+    </radio-group>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>交接地点</view> 
+    </view>
+    <input class="input" bindblur="inputecho2" placeholder="点击填写交接地" cursor-spacing="140" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/rmb.png"></image> 
+      </view>
+      <view>订单价格</view>
+    </view>
+    <input class="input" bindblur="inputecho1" type="digit" cursor-spacing="140" placeholder="点击填写，最低不小于1元"   confirm-type="done">
+    </input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/editor.png"></image> 
+      </view>
+      <view>备注</view>
+    </view>
+    <input class="input" bindblur="inputecho3" type="text" cursor-spacing="140" placeholder="给骑手的备注" confirm-type="done">
+    </input>
+  </view>
+
+  
+      <view class="chooseRider" bindtap="chooseRider" wx:if="{{!currentDeliverList.is_matched}}">选择骑手</view>
+
+  <!-- 骑手信息 -->
+  <view class='one' wx:else bindtap="chooseRider">
+              <view class='user'>
+              <!-- 这里还要用把用户头像发送到服务器 然后返回src  根据大侠提交的表单数据可来反馈 -->
+                 <open-data type="userAvatarUrl"></open-data>
+                  <view class='info'>
+                     <view class='a'>
+                        <text>{{currentDeliverList.sever_type}}</text>
+                     </view>
+                     <view class='b'>
+                       <!-- 接单情况和表单发布时间 -->
+                        <view class='money'>{{currentDeliverList.upload_time}}</view>
+                        <!-- <text class='finish' wx:if="{{is_outdata&&!is_failed&&on_working&&is_matched}}">已送达</text>
+                        <text class='finish' wx:else>交易失败</text> -->
+                     </view>
+                  </view>
+              </view>
+              <!--允许时间 -->
+               <view class='col'>
+                 <image src='/ico/time.png'></image>订单金额：￥{{currentDeliverList.unit_price}}
+              </view>
+              <!-- 备注信息 -->
+              <view class='col'>
+                 <image src='/ico/info.png'></image>骑手：{{currentDeliverList.choose_rider}}
+              </view>
+              <view class='col'>
+                  <image src='/ico/info.png'></image>交接地点：{{currentDeliverList.meet_place}}
+              </view>
+              <view class='col'>
+                  <image src='/ico/info.png'></image>备注：{{currentDeliverList.cus_details}}
+              </view>
+          </view>
+  <!-- 用于底部的留白 -->
+  <view class="nullArea"></view>
+
+  
+  <view class="confirmArea">
+    <view class="image"><image src="../../../ico/shoppingCar.png"></image></view>
+    <view class="sever_type">{{serviceName}}</view>
+    <view class="price">合计：{{unit_price}}(元)</view>
+    <button class="submit" open-type='getUserInfo'  bindtap="confirm" lang="zh_CN" bindgetuserinfo="onGotUserInfo">提交订单</button>
+  </view>
+
+  <view class="mask" wx:if="{{confirmBoxVisible}}">
+    <view class="confirmBox">
+      <view class="title">
+        <view>确认服务信息</view>
+        <image src="../../../ico/close.png" bindtap="close"></image>
+      </view>
+
+      <view class="content">
+        <view class="text">确认服务信息:{{sever_type}} </view>
+        <view class="text">订单价格:{{unit_price}}(元)</view>
+        <view class="text">交接地点:{{meet_place}}</view>
+        <view class="text">备注:{{cus_details}}</view>
+        <view>订单提交时间{{submitTime}}</view>
+        <button bindtap="submit">确     认</button>
+      </view>
+    </view>
+  </view>
+  
+
+
+
+
+  
+  

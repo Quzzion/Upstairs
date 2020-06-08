@@ -1,0 +1,40 @@
+<!--pages/userinfo/history/history.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='list'>
+      <block wx:for="{{deliverList.length}}" wx:for-index="i">
+          <view class='one'>
+              <view class='user'>
+              <!-- 这里还要用把用户头像发送到服务器 然后返回src  根据大侠提交的表单数据可来反馈 -->
+                 <open-data type="userAvatarUrl"></open-data>
+                  <view class='info'>
+                     <view class='a'>
+                        <text>{{deliverList[i].sever_type}}</text>
+                     </view>
+                     <view class='b'>
+                       <!-- 接单情况和表单发布时间 -->
+                        <view class='money'>{{deliverList[i].upload_time}}</view>
+  <text class='finish' wx:if="{{deliverList[i].is_outdata&&!deliverList[i].is_failed&&deliverList[i].on_working&&deliverList[i].is_matched}}">已送达</text> 
+                        <text class='finish' wx:else>交易失败</text>
+                     </view>
+                  </view>
+              </view>
+              <!--允许时间 -->
+               <view class='col'>
+                 <image src='/ico/time.png'></image>订单金额：￥{{deliverList[i].unit_price}}
+              </view>
+              <!-- 备注信息 -->
+              <view class='col' wx:if="{{deliverList[i].is_matched}}">
+                 <image src='/ico/info.png'></image>骑手：{{deliverList[i].torider}}
+              </view>
+              <view class='col' wx:else>
+                 <image src='/ico/info.png'></image>骑手：匹配失败
+              </view>
+              <view class='col'>
+                  <image src='/ico/info.png'></image>交接地点：{{deliverList[i].meet_place}}
+              </view>
+              <view class='col'>
+                  <image src='/ico/info.png'></image>备注：{{deliverList[i].cus_details}}
+              </view>
+          </view>
+      </block>
+</view>

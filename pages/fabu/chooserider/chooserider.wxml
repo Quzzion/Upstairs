@@ -1,0 +1,53 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="background" style="width: 100%;height: 120rpx; background-color: #1baad5;"></view>
+<refresh-view id='refreshView' backgroundColor="#1baad5;" bind:onRefresh="onPullDownRefresh"   bind:onPullState="_pullState" />
+
+<view class='list' bindtouchstart='handletouchstart' bindtouchmove='handletouchmove' bindtouchend='handletouchend' bindtouchcancel='handletouchcancel'>
+      <block wx:for="{{deliverList.length}}"  wx:for-index="i">
+          <view class='one' wx-if="{{deliverList[i].is_outdata=='0'}}">
+              <view class='user'>
+              
+                 <open-data type="userAvatarUrl"></open-data>
+                  <view class='info'>
+                     <view class='a'>
+                        <text>{{deliverList[i].tocustomer}}</text>
+                     </view>
+                     <view class='b'>
+                       
+                        <view class='money'>接单情况:{{deliverList[i].sever_type}}</view>
+                        <text class='orderButton' bindtap="confirm" data-index="{{i}}">去下单</text>
+                     </view>
+                  </view>
+              </view>
+             
+               <view class='col'>
+                 <image src='/ico/time.png'></image>配送时间：{{deliverList[i].upload_time}}
+              </view>
+             
+              <view class='col'>
+                 <image src='/ico/info.png'></image>配送范围：{{deliverList[i].meet_place}}
+              </view>
+             
+              <view class='col'>
+                 <image src='/ico/info.png'></image>骑手备注：{{deliverList[i].choose_rider}}
+              </view>
+          </view>
+         
+          <view class="mask" wx:if="{{confirmBoxVisible}}">
+              <view class="confirmBox">
+                <view class="title">
+                  <view>确认下单信息</view>
+                  <image src="../../../ico/close.png" bindtap="close"></image>
+                </view>
+
+                <view class="content">
+                  <view class="text">服务信息:{{currentDeliverList.sever_type}} </view>
+                  <view class="text">订单价格:{{currentDeliverList.unit_price}}(元)</view>
+                  <view class="text">交接地点:{{currentDeliverList.meet_place}}</view>
+                  <view class="text">备注:{{currentDeliverList.cus_details}}</view>
+                  <button bindtap="completeOrder">确认下单</button>
+                </view>
+              </view>
+            </view>
+      </block>
+    </view>

@@ -1,0 +1,57 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='list'>
+      <block wx:for="{{deliverList.length}}" wx:for-index="i">
+          <view class='one' wx-if="{{deliverList[i].is_matched=='1' && deliverList[i].on_working=='1'&& deliverList[i].is_outdata=='0'}}">
+              <view class='user'>
+              <!-- 这里还要用把用户头像发送到服务器 然后返回src  根据大侠提交的表单数据可来反馈 -->
+                 <!-- <open-data type="userAvatarUrl"></open-data> -->
+                  <view class='info'>
+                    <view>
+                      <view class='a'>
+                          <text>{{deliverList[i].sever_type}}</text>
+                      </view>
+                      <view class='b'>
+                        <!-- 接单情况和表单发布时间 -->
+                          <view class='money'>{{deliverList[i].upload_time}}</view>
+                          <!-- <text class='finish' wx:if="{{is_outdata&&!is_failed&&on_working&&is_matched}}">已送达</text>
+                          <text class='finish' wx:else>交易失败</text> -->   
+                      </view>
+                    </view>
+                    <!-- <button type="primary" bindtap="getOrder" data-index="{{i}}">接单</button> -->
+                     <button type="primary" bindtap="confirm" data-index="{{i}}">已送达</button>
+                  </view>
+              </view>
+              <!--允许时间 -->
+               <view class='col'>
+                 <image src='/ico/time.png'></image>订单金额：￥{{deliverList[i].unit_price}}
+              </view>
+              <!-- 备注信息 -->
+              <view class='col'>
+                  <image src='/ico/info.png'></image>交接地点：{{deliverList[i].meet_place}}
+              </view>
+              <view class='col'>
+                  <image src='/ico/info.png'></image>备注：{{deliverList[i].cus_details}}
+              </view>
+          </view>
+          
+          <!-- 弹窗模块 -->
+          <view class="mask" wx:if="{{confirmBoxVisible}}">
+              <view class="confirmBox">
+                <view class="title">
+                  <view>确认接单信息</view>
+                  <image src="../../../ico/close.png" bindtap="close"></image>
+                </view>
+
+                <view class="content">
+                  <view class="text">服务信息:{{currentDeliverList.sever_type}} </view>
+                  <view class="text">订单价格:{{currentDeliverList.unit_price}}(元)</view>
+                  <view class="text">交接地点:{{currentDeliverList.meet_place}}</view>
+                  <view class="text">备注:{{currentDeliverList.cus_details}}</view>
+                  <button bindtap="completeOrder">已送达</button>
+                </view>
+              </view>
+            </view>
+      </block>
+</view>
+
+  

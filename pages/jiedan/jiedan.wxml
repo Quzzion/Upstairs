@@ -1,0 +1,32 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container">
+    <view class="writeInformation">
+        <view wx:if="{{is_working==false}}">状态：休息中</view>
+        <view wx:else>状态：工作中</view>
+        <switch checked="true" type="switch" bindchange="switch_work"></switch>
+    </view>
+    <view class="sun" wx:if="{{is_working==true}}">
+        <image src="../../ico/sun.png"></image>
+    </view>
+    <view class="buttonArea">
+      <view  bindtap="gotoworking" class="button">
+        <image src="../../ico/approval-daily.png"></image>
+        <view>完善信息</view>  
+      </view>
+      <view  bindtap="gotocustomer" class="button"> 
+        <image src="../../ico/report.png"></image>
+        <view>开始接单</view> 
+      </view>
+      <view  bindtap="gotodelivering" class="button"> 
+        <image src="../../ico/car.png"></image>
+        <view>正在派送</view>
+      </view>
+      <view  bindtap="#" class="button" bindtap="post"> 
+        <image src="../../ico/report.png"></image>
+        <view>敬请期待</view> 
+      </view>
+    </view>
+</view>
+<view class="Mask" wx-if="{{is_working==false}}">
+  <image src='../../ico/sleep.png'></image>
+</view>

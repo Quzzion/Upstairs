@@ -1,0 +1,80 @@
+<!-- 下面的view是空格效果 QAQ -->
+<!-- //引入自定义导航栏的组件，'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+  <view class="writeInformation">
+    <view class="post" bindtap="gotoform">
+      <image src="../../ico/posts_fill.png"></image>
+    </view>
+  </view>
+  <view class="text" wx:if="{{postFlag}}" bindtap="changeFunction">发布订单</view>
+  <view class="text" wx:else bindtap="changeFunction">查看订单</view>
+  <!-- <view class="buttonArea">
+      <view  bindtap="gotoform" class="button">
+        <image src="../../ico/approval-daily.png"></image>
+        <view>快递代拿发布</view>  
+       </view>
+      <view  bindtap="gotostateinfo" class="button"> 
+        <image src="../../ico/report.png"></image>
+        <view>正在进行的订单</view> 
+      </view>
+  </view> -->
+
+
+<!-- <view class='list'>
+      <block wx:for="{{deliverList.length}}"  wx:for-index="i">
+          <view class='one' wx-if="{{deliverList[i].is_outdata=='0'}}">
+              <view class='user'>
+              
+                 <open-data type="userAvatarUrl"></open-data>
+                  <view class='info'>
+                     <view class='a'>
+                        <text>{{deliverList[i].tocustomer}}</text>
+                     </view>
+                     <view class='b'>
+                       
+                        <view class='money'>接单情况:{{deliverList[i].sever_type}}</view>
+                        <text class='orderButton' bindtap="confirm" data-index="{{i}}">去下单</text>
+                     </view>
+                  </view>
+              </view>
+             
+               <view class='col'>
+                 <image src='/ico/time.png'></image>配送时间：{{deliverList[i].upload_time}}
+              </view>
+             
+              <view class='col'>
+                 <image src='/ico/info.png'></image>配送范围：{{deliverList[i].meet_place}}
+              </view>
+             
+              <view class='col'>
+                 <image src='/ico/info.png'></image>骑手备注：{{deliverList[i].choose_rider}}
+              </view>
+          </view>
+         
+          <view class="mask" wx:if="{{confirmBoxVisible}}">
+              <view class="confirmBox">
+                <view class="title">
+                  <view>确认接单信息</view>
+                  <image src="../../ico/close.png" bindtap="close"></image>
+                </view>
+
+                <view class="content">
+                  <view class="text">服务信息:{{currentDeliverList.sever_type}} </view>
+                  <view class="text">订单价格:{{currentDeliverList.unit_price}}(元)</view>
+                  <view class="text">交接地点:{{currentDeliverList.meet_place}}</view>
+                  <view class="text">备注:{{currentDeliverList.cus_details}}</view>
+                  <button bindtap="completeOrder">已 送 达</button>
+                </view>
+              </view>
+            </view>
+      </block>
+    </view> -->
+
+
+<!-- <view wx:for="{{output}}">
+  <view>
+    　
+  </view>
+  {{item}}
+</view> -->

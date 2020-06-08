@@ -1,0 +1,58 @@
+<!--pages/jiedan/working/working.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="writeInformation">
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/export services.png"></image> 
+      </view>
+      <view>取一个昵称</view> 
+    </view>
+    <input class="input" bindblur="getNickname" cursor-spacing="140" placeholder="{{nick_name}}" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>填写你的学号</view> 
+    </view>
+    <input class="input" bindblur="getSchoolNum" cursor-spacing="140" placeholder="{{school_num}}" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/rmb.png"></image> 
+      </view>
+      <view>填写你的个性签名</view>
+    </view>
+    <input class="input" bindblur="getSign" type="text" cursor-spacing="140" placeholder="{{my_Sign}}"   confirm-type="done">
+    </input>
+  </view>
+
+
+  <view class="confirmArea">
+    <button class="submit"  bindtap="confirm" lang="zh_CN">提交信息</button>
+  </view>
+
+  <view class="mask" wx:if="{{confirmBoxVisible}}">
+    <view class="confirmBox">
+      <view class="title">
+        <view>确认信息</view>
+        <image src="../../../ico/close.png" bindtap="close"></image>
+      </view>
+
+      <view class="content">
+        <view class="text">允许客户获得你的姓名:{{permission}}</view>
+        <view class="text">可配送时间:{{ava_time}}</view>
+        <view class="text">可配送区域:{{locationave}}</view>
+        <view class="text">单次最大的订单数:{{user_max}}</view>
+        <view>备注:{{details}}</view>
+        <button bindtap="submit">确     认</button>
+      </view>
+    </view>
+  </view>

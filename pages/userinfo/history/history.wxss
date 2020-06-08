@@ -1,0 +1,68 @@
+/* pages/userinfo/history/history.wxss */
+.list{
+    margin-top: 130rpx;
+    padding-bottom: 150rpx;
+    color: #000;
+  }
+  .list .one{
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    width: 91vw;
+    border-radius: 10rpx;
+    margin: 0 auto 30rpx;
+    color: #000;
+    box-shadow: 3px 5px 3px -5px rgba(0, 0, 0, 0.5);
+  }
+  .list .one .user open-data{
+     height: 12vw;
+     width: 12vw;
+     border-radius: 12vw;
+  }
+  .list .one .user{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+  }
+  .list .one .user .info{
+    width: 83vw;
+    margin-left: 20rpx;
+  }
+  .list .one .user .a{
+    display: flex;
+  }
+  .list .one .user .a text{
+    margin-right: 20rpx;
+  }
+  .list .one .user .b{
+    display: flex;
+    font-size: 26rpx;
+    line-height: 50rpx;
+    justify-content: space-between;
+  }
+  .list .one .user .b .money{
+  color: #000;
+  }
+  .list .one .user .b .finish{
+    color: #000;
+  }
+  .list .one .col{
+    color: #000;
+    margin: 5rpx 0;
+    /* display: flex;
+    align-items: center; */
+    font-size: 32rpx;
+  }
+  .text-fitter{
+    font-size: 50rpx;
+    text-align: center;
+
+  }
+  .list .one .col image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+  }

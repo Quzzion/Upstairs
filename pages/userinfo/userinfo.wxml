@@ -1,0 +1,53 @@
+<!-- 我/头部区 直接获取微信头像和昵称 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <view class="writeInformation">
+        <!-- <view class="left">
+             <image src="../../ico/user_infor.png"></image>
+              <view>登录/注册</view>
+        </view> -->
+        <!-- <image src="../../ico/forward.png" class="right"></image> -->
+        <view class='userinfo-avatar' bindtap="uploadAvatar">
+          <open-data type="userAvatarUrl" wx:if="{{!imgUrl}}"></open-data>
+          <image src="{{imgUrl}}" wx:else></image>
+        </view> 
+        <view class="username"> 
+          <view class="nickname" wx:if="{{!nick_name==''}}">{{nick_name}}</view>
+          <open-data type="userNickName" class='nickname' wx:else></open-data>
+          <view>个性签名：{{my_Sign}}</view>
+        </view>
+  </view>
+  <!-- 我/菜单区 学生认证undo -->
+
+  <view class="chooseBox">
+    <view class="button" bindtap="uploadAvatar">
+      <image src="../../ico/survey.png"></image>
+      <view>上传头像</view> 
+    </view>
+    <view class="button" bindtap="gotoHistory">
+      <image src="../../ico/price.png"></image>
+      <view>订单查询</view> 
+    </view>
+    <view class="button" bindtap="hducas">
+      <image src="../../ico/follow.png"></image>
+      <view>学生认证</view> 
+    </view>
+    <view class="button" open-type="openSetting">
+      <image src="../../ico/promote.png"></image>
+      <view>授权设置</view> 
+    </view>
+    <view class="button" bindtap="gotoUploadInfor">
+      <image src="../../ico/my-daily.png"></image>
+      <view>完善信息</view> 
+    </view>
+    <view class="button">
+      <image src="../../ico/information.png"></image>
+      <view>敬请期待</view> 
+    </view>
+</view>
+
+
+
+
+
+
+

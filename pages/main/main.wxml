@@ -1,0 +1,16 @@
+<!-- <nav-bar navbar-data='{{nvabarData}}'></nav-bar> -->
+<!-- <view class="inputarea">
+  <input placeholder="手机号" type="number" maxlength="11" bindblur="inputPhoneNumber"></input>
+  <view class="line"></view>
+  <input placeholder="密码" type="text" minlength="6" maxlength="16" password="{{true}}" bindblur="inputPassword"></input>
+</view>
+<view class="button" bindtap="login">登录</view>
+<view class="bottom">
+  <view class="code" bindtap="codeLogin">短信验证码登录</view>
+  <view class="rigister" bindtap="gotoRegister">注册</view> -->
+  <view class="container">
+    <image src="../../ico/main_background.jpg"></image>
+    <button class="rigister" bindtap="debug">开始使用</button>
+  </view>
+<!-- </view> -->
+

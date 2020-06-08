@@ -1,0 +1,98 @@
+<!--pages/jiedan/working/working.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="writeInformation">
+  </view>
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+       <image src="../../../ico/export services.png"></image> 
+      </view>
+      <view>是否同意Upstairs公开你的头像和昵称</view>
+    </view>
+    <radio-group bindchange="getP">
+        <radio value="是">是</radio>
+        <radio value="否">否</radio>
+    </radio-group>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>填写可以接单的时间（或任意）</view> 
+    </view>
+    <input class="input" bindblur="timeBind" cursor-spacing="140" placeholder="点击填写接单时间" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/rmb.png"></image> 
+      </view>
+      <view>填写可以配送的地点(或任意)</view>
+    </view>
+    <input class="input" bindblur="locationBind" type="text" cursor-spacing="140" placeholder="点击填写配送区域"   confirm-type="done">
+    </input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/editor.png"></image> 
+      </view>
+      <view>选择你一次可以带的最大单数:{{user_max}}</view>
+    </view>
+    <picker class="pickerbox" bindchange="choosemax" value="{{index}}" range="{{maxrange}}">
+        <view class="clickArea">
+          点击选择
+        </view>
+      </picker>
+   
+  </view>
+  
+    <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>备注(想对顾客说的话)</view> 
+    </view>
+    <input class="input" bindblur="detailBind" placeholder="点击填写备注" cursor-spacing="140" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="confirmArea">
+    <button class="submit" open-type='getUserInfo'  bindtap="confirm" lang="zh_CN" bindgetuserinfo="onGotUserInfo">提交信息</button>
+  </view>
+
+  <view class="mask" wx:if="{{confirmBoxVisible}}">
+    <view class="confirmBox">
+      <view class="title">
+        <view>确认信息</view>
+        <image src="../../../ico/close.png" bindtap="close"></image>
+      </view>
+
+      <view class="content">
+        <view class="text">允许客户获得你的姓名:{{permission}}</view>
+        <view class="text">可配送时间:{{ava_time}}</view>
+        <view class="text">可配送区域:{{locationave}}</view>
+        <view class="text">单次最大的订单数:{{user_max}}</view>
+        <view>备注:{{details}}</view>
+        <button bindtap="submit">确     认</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="informationItem">
+    <view class="confirmInfo">
+      <view class="title">确认你的大侠信息：</view>
+      <view>允许客户获得你的姓名:{{permission}}</view>
+      <view>可配送时间:{{timeAva}}</view>
+      <view>可配送区域:{{locationAva}}</view>
+      <view>单次最大的订单数:{{max}}</view>
+    </view>
+    <button type="primary" bindtap="submit">提 交 信 息</button>
+  </view> -->
+
+
+  

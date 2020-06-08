@@ -1,0 +1,166 @@
+
+.writeInformation{
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  text-align: left;
+  height: 215rpx;
+   font-size: 35rpx;
+}
+.nameAndPhone{
+  display: flex;
+ 
+}
+.name{
+  margin-right: 100rpx; 
+}
+.location{
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.location image{
+  height: 55rpx;
+  width: 55rpx;
+  margin-left: -11rpx;
+}
+.input{
+    margin: 20rpx auto;
+    padding: 10rpx;
+    height: 85rpx;
+    text-align: center;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+}
+.informationitem{
+  margin-top: 0; 
+  width: 100%;
+  padding: 16rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align:left;
+  font-size: 30rpx;
+  border-radius: none;
+  height: 200rpx;
+}
+.informationitem .text{
+  margin-bottom: 16px;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+}
+.informationitem .text .image{
+  height: 63rpx;
+  width: 63rpx;
+  border-radius: 50%;
+  background-color: #1baad5;
+  margin-right: 20rpx;
+}
+.informationitem .text .image image{
+  height: 63rpx;
+  width: 63rpx;
+  margin: 0 auto;
+  line-height: 36rpx;
+}
+.informationitem radio-group{
+  margin:  0 10rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.informationitem .pickerbox{
+  text-align: center;
+}
+.informationitem .pickerbox .clickArea{
+  width: 57%;
+  height: 77rpx;
+  background-color: #1baad5;
+  line-height: 77rpx;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 12rpx;
+}
+.title{
+  text-align: center;
+  padding:0 20px 20rpx;
+  font-size: 45rpx;
+}
+.confirmArea{
+  position: fixed;
+  bottom: 0;
+  height: 115rpx;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+}
+
+.confirmArea .submit{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  background-color: #ec4829;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  border-radius: 0;
+}
+button{
+  border-radius: 0;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(218, 216, 216, 0.85);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mask .confirmBox{
+  height: 550rpx;
+  width: 600rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.mask .confirmBox .title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.mask .confirmBox .title image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 130rpx;
+
+}
+.mask .confirmBox .title view{
+  margin-left: 150rpx;
+  font-weight: 550;
+}
+.mask .confirmBox .content view{
+  margin-bottom: 18rpx;
+  margin-left: 35rpx;
+  font-size: 35rpx;
+}
+.mask .confirmBox .content button{
+  margin-top: 0rpx;
+  width: 43%;
+  background-color: #ec4829;
+  color: #fff;
+  height: 83rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

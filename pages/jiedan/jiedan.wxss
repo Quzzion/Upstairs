@@ -1,0 +1,213 @@
+
+.writeInformation{
+  margin-bottom: 226rpx;
+  height: 730rpx;
+  padding-top: 128rpx;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: center;
+}
+.writeInformation view{
+  z-index: 99;
+  margin-top: 550rpx;
+  margin-right: 10rpx;
+  /* margin-top: 7rpx; */
+}
+.writeInformation switch{
+  z-index: 99;
+  margin-top: 545rpx;
+}
+.sun{
+  width: 440rpx;
+  height: 440rpx;
+  position: absolute;
+  top: 175rpx;
+  left: 21%;
+}
+.sun image{
+  height: 100%;
+  width: 100%;
+}
+.Mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(27,170,213,0.5);
+  z-index: 98;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.Mask image{
+  height: 440rpx;
+  width: 440rpx;
+  margin-top: 175rpx;
+}
+.buttonArea{ 
+    margin: 0 auto ;
+    width: 90%;
+    display: flex;
+    padding: 16rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 3px 5px 3px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 15rpx;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 5%;
+    top: 763rpx;
+  }
+ .button{
+   border-radius: 10rpx;
+   font-size: 35rpx;
+   color:#000;
+   text-align: center;
+  width: 48%;
+  height: 180rpx;
+  box-sizing: border-box;
+  /* border-radius: 0 */
+  background-color: #fff;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.button image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.avalibleList{
+  height: 46%;
+  width: 96%;
+  background-color: #fff;
+   color:#000;
+}
+
+.list{
+    margin-top: 160rpx;
+    padding-bottom: 150rpx;
+    color: #000;
+  }
+  .list .one{
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    width: 91vw;
+    border-radius: 10rpx;
+    margin: 0 auto 30rpx;
+    color: #000;
+    box-shadow: 3px 5px 3px -5px rgba(0, 0, 0, 0.5);
+  }
+  .list .one .user open-data{
+     height: 12vw;
+     width: 12vw;
+     border-radius: 12vw;
+  }
+  .list .one .user{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+  }
+  .list .one .user .info{
+    width: 83vw;
+    margin-left: 20rpx;
+    display: flex;
+  }
+  .list .one .user .info button{
+    width: 28%;
+    margin-left: 140rpx;
+    line-height: 105rpx;
+    background-color: #1baad5;
+  }
+  .list .one .user .a{
+    display: flex;
+  }
+  .list .one .user .a text{
+    margin-right: 20rpx;
+  }
+  .list .one .user .b{
+    display: flex;
+    font-size: 26rpx;
+    line-height: 50rpx;
+    justify-content: space-between;
+  }
+  .list .one .user .b .money{
+  color: #000;
+  }
+  .list .one .user .b .finish{
+    color: #000;
+  }
+  .list .one .col{
+    color: #000;
+    margin: 5rpx 0;
+    /* display: flex;
+    align-items: center; */
+    font-size: 32rpx;
+  }
+  .text-fitter{
+    font-size: 50rpx;
+    text-align: center;
+
+  }
+  .list .one .col image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+  }
+
+
+  .mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(218, 216, 216, 0.85);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mask .confirmBox{
+  height: 500rpx;
+  width: 600rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.mask .confirmBox .title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 17rpx;
+}
+.mask .confirmBox .title image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 87rpx;
+
+}
+.mask .confirmBox .title view{
+  margin-left: 174rpx;
+  font-weight: 550;
+}
+.mask .confirmBox .content view{
+  margin-bottom: 27rpx;
+  margin-left: 43rpx;
+  font-size: 35rpx;
+}
+.mask .confirmBox .content button{
+  margin-top: 10rpx;
+  width: 43%;
+  background-color: #ec4829;
+  color: #fff;
+  height: 83rpx;
+  border-radius: 10rpx;
+}
